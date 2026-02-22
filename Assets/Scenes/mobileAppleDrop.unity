@@ -1404,6 +1404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 672a54ca529fc504a961e7455f7cd676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  playerStats: {fileID: 11400000, guid: 015dad21b99af624cb7410d21be5f622, type: 2}
   enemyPrefab: {fileID: 7254592548874112268, guid: a67226ad8516b91419e6d115b0869553, type: 3}
   spawnRate: 0.1
   spawnRange: 1
@@ -2210,9 +2211,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8246623374153306981, guid: 191b4ed011ec04240b120c2fb65086ad, type: 3}
+      propertyPath: Stats
+      value: 
+      objectReference: {fileID: 11400000, guid: 015dad21b99af624cb7410d21be5f622, type: 2}
+    - target: {fileID: 8246623374153306981, guid: 191b4ed011ec04240b120c2fb65086ad, type: 3}
       propertyPath: inputSystem
       value: 
       objectReference: {fileID: 1785097370}
+    - target: {fileID: 8246623374153306981, guid: 191b4ed011ec04240b120c2fb65086ad, type: 3}
+      propertyPath: playerStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 015dad21b99af624cb7410d21be5f622, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

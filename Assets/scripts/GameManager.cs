@@ -1,8 +1,11 @@
 using TMPro;
 using UnityEngine;
 
+
+
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] DodgerAttributes playerStats;
 
     public GameObject enemyPrefab;
 
@@ -29,9 +32,9 @@ public class GameManager : MonoBehaviour
 
         Instantiate(enemyPrefab, worldPos, Quaternion.identity);
 
-        score++;
+        playerStats.currentScore++;
 
-        UpdateText(score);
+        UpdateText(playerStats.currentScore);
     }
 
     void StartSpawning()
