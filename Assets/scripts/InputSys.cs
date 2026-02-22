@@ -1,0 +1,35 @@
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class InputSys : MonoBehaviour
+{
+    
+
+    public bool IsPressing(out Vector2 screenPos)
+    {
+        screenPos = Vector2.zero;
+
+        if (Mouse.current != null && Mouse.current.leftButton.isPressed)
+        { 
+            
+            screenPos = Mouse.current.position.ReadValue();
+
+            return true;
+        }
+
+
+        if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.IsPressed())
+        {
+            screenPos = Touchscreen.current.position.ReadValue();
+
+            return true;
+        }
+        
+        return false;
+        
+    }
+
+
+
+
+}
