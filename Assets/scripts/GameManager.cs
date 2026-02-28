@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] DodgerAttributes playerStats;
 
-    public GameObject enemyPrefab;
+    public GameObject[] enemyPrefab;
 
     public float spawnRate = 5;
 
@@ -24,13 +24,14 @@ public class GameManager : MonoBehaviour
     void SpawnEnemy()
     {
 
-        float randomX = Random.Range(0f, spawnRange);
+        float randomX = Random.Range(spawnRange, 0f);
 
         Vector2 viewPortPos = new Vector2(randomX, 1f);
 
         Vector2 worldPos = Camera.main.ViewportToWorldPoint(viewPortPos);
 
-        Instantiate(enemyPrefab, worldPos, Quaternion.identity);
+        
+        Instantiate(enemyPrefab[Random.Range(0, enemyPrefab.Length)], worldPos, Quaternion.identity);
 
         playerStats.currentScore++;
 

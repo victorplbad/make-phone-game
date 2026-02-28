@@ -1,9 +1,18 @@
 using UnityEditor;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class BaseEnemy : MonoBehaviour
 {
-    
+    Rigidbody2D rb;
+    public float gravityScale = 1f;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+
+        rb.gravityScale = gravityScale;
+    }
+
     void Update()
     {
      
