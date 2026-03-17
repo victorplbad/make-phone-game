@@ -38,12 +38,12 @@ public class Player : MonoBehaviour
             if (touchPos.x < 0)
             {
                 moveDir = -1f;
-                Debug.Log("venstre");
+                //Debug.Log("venstre");
             }
             else
             {
                 moveDir = 1f;
-                Debug.Log("højre");
+                //Debug.Log("højre");
             }
           
 
