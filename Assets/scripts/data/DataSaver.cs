@@ -21,7 +21,7 @@ public class DataSaver : MonoBehaviour
     public int currentPlayerHealth;
 
 
-    public PlayerData playerData;
+    public PlayerData playerData = new();
     
     public string DataSavingKey = "saveDataPlace";
     
@@ -34,10 +34,10 @@ public class DataSaver : MonoBehaviour
     {
 
         gameDataCurrent = transform.GetComponent<GameManager>().gameData;
-        
 
 
 
+        SaveToFile();
 
 
 
@@ -47,14 +47,15 @@ public class DataSaver : MonoBehaviour
 
 
 
-    void SaveJson(GameData gameData)
+    void SaveJson(GameData gameDataHere)
     {
-        string folder = Path.Combine(GetSavePath(), "SavedData");
+        string folder = Path.Combine(GetSavePath(), "scripts/data/");
+        
         if (!Directory.Exists(folder))
             Directory.CreateDirectory(folder);
 
-        string pathFull = Path.Combine(folder, "gameData.json");
-        string json = JsonUtility.ToJson(gameData, true);
+        string pathFull = Path.Combine(folder, "saveDataPlace.json");
+        string json = JsonUtility.ToJson(gameDataHere, true);
         File.WriteAllText(pathFull, json);
         Debug.Log("Saved JSON: " + pathFull);
         positionSavedShow.text = pathFull;
@@ -65,21 +66,20 @@ public class DataSaver : MonoBehaviour
 
     public void SaveToFile()
     {
-        
+
+        PlayerData data = new();
+        data.time = currentTime;
+        data.playerPositionX = currentPlayerPositionX;
+        data.playerScore = currentPlayerScore;
+        data.playerHealth = currentPlayerHealth;
+
+        //GameData gamedate = new();
+        //gamedate.entries.Add(data);
+
+        SaveJson(gameDataCurrent);
 
 
 
-
-        playerData.time = currentTime;
-        playerData.playerPositionX = currentPlayerPositionX;
-        playerData.playerScore = currentPlayerScore;
-        playerData.playerHealth = currentPlayerHealth;
-
-
-        
-
-
-        
 
     }
 
@@ -92,7 +92,7 @@ public class DataSaver : MonoBehaviour
 
     public void MoveToDownloads()
     {
-        string savedFolder = Path.Combine(GetSavePath(), "SavedData");
+        string savedFolder = Path.Combine(GetSavePath(), "scripts/data/");
         if (!Directory.Exists(savedFolder))
         {
             Debug.LogWarning("SavedData folder does not exist!");

@@ -2350,6 +2350,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 711609418138566169, guid: 191b4ed011ec04240b120c2fb65086ad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5282996893996102340}
+    - targetCorrespondingSourceObject: {fileID: 711609418138566169, guid: 191b4ed011ec04240b120c2fb65086ad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5282996893996102350}
   m_SourcePrefab: {fileID: 100100000, guid: 191b4ed011ec04240b120c2fb65086ad, type: 3}
 --- !u!1 &5282996893996102339 stripped
 GameObject:
@@ -2375,6 +2378,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1453459164806594061, guid: 191b4ed011ec04240b120c2fb65086ad, type: 3}
   m_PrefabInstance: {fileID: 5282996893996102338}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5282996893996102350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5282996893996102339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13be8421d1b7ff343aec3816d18afab5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Sensors_Gyroscope
+  moveSpeed: 5
+  player: {fileID: 5282996893996102339}
 --- !u!1001 &8239039976141423019
 PrefabInstance:
   m_ObjectHideFlags: 0

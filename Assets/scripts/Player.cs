@@ -31,6 +31,10 @@ public class Player : MonoBehaviour
         float moveDir = 0f;
         Vector2 screennPos;
 
+
+        /*        /// move using gyrosope senscor
+
+
         if (inputSystem.IsPressing(out screennPos)) 
         {
             Vector3 touchPos = Camera.main.ScreenToWorldPoint(new Vector3(screennPos.x, screennPos.y, 0f));
@@ -60,7 +64,7 @@ public class Player : MonoBehaviour
         rb.linearVelocityX = moveDir * moveSpeed;
 
 
-
+        */
     }
 
     
