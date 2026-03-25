@@ -1,1 +1,12 @@
-{}
+{
+    "entries": [
+        {
+            "time": 31.011075973510743,
+            "playerPositionX": {
+                "instanceID": 53894
+            },
+            "playerScore": 5,
+            "playerHealth": 10
+        }
+    ]
+}

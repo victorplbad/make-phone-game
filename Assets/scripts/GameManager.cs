@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] DodgerAttributes playerStats;
     public GameObject[] enemyPrefab;
+    public Player playersCharter;
     
     public float spawnRate = 5;
     private bool gameStarted = false;
@@ -26,8 +27,10 @@ public class GameManager : MonoBehaviour
     public Transform currentPlayerPositionX;
     public int currentPlayerScore;
     public int currentPlayerHealth;
+    
+    public Transform playerItSelf;
 
-
+    
 
 
 
@@ -45,6 +48,7 @@ public class GameManager : MonoBehaviour
         Instantiate(enemyPrefab[Random.Range(0, enemyPrefab.Length)], worldPos, Quaternion.identity);
 
         playerStats.currentScore++;
+        
 
         UpdateText(playerStats.currentScore);
     }
@@ -62,6 +66,11 @@ public class GameManager : MonoBehaviour
             StartSpawning();
             gameStarted = true;
         }
+
+        currentPlayerScore = playerStats.currentScore;
+        currentPlayerHealth = playersCharter.myHP;
+        currentPlayerPositionX = playerItSelf;
+        currentTime += Time.deltaTime; // + playerData.time;
     }
 
 
@@ -77,8 +86,6 @@ public class GameManager : MonoBehaviour
 
     public void LoadToObject()
     {
-
-
 
 
         currentTime = playerData.time;

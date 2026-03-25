@@ -1555,6 +1555,13 @@ MonoBehaviour:
   spawnRate: 5
   spawnRange: 1
   scoreText: {fileID: 2032816985}
+  gameData:
+    entries: []
+  playerData:
+    time: 0
+    playerPositionX: {fileID: 0}
+    playerScore: 0
+    playerHealth: 0
   currentTime: 0
   currentPlayerPositionX: {fileID: 0}
   currentPlayerScore: 0
@@ -1584,10 +1591,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06f6f7e45403e4c4d8ca41fd024bec3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DataSaver
-  currentTime: 0
+  currentTime: 15
   currentPlayerPositionX: {fileID: 5282996893996102345}
-  currentPlayerScore: 0
-  currentPlayerHealth: 0
+  currentPlayerScore: 6
+  currentPlayerHealth: 5
+  playerData:
+    time: 10
+    playerPositionX: {fileID: 5282996893996102345}
+    playerScore: 7
+    playerHealth: 3
   DataSavingKey: saveDataPlace
   positionSavedShow: {fileID: 824478276}
 --- !u!1001 &1819205744

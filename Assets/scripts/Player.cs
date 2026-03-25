@@ -11,8 +11,8 @@ public class Player : MonoBehaviour
 
     public int moveSpeed = 5;
     Rigidbody2D rb;
-    
 
+    public int myHP = 0;
 
     public InputSys inputSystem;
 
@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-        int myHP = playerStats.maximumHealth;
+        myHP = playerStats.maximumHealth;
     }
 
     // Update is called once per frame

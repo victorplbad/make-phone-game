@@ -12,8 +12,11 @@ using UnityEditor.Overlays;
 using System.Xml.Serialization;
 using UnityEngine;
 
+[System.Serializable]
 public class DataSaver : MonoBehaviour
 {
+
+    
 
     public float currentTime;
     public Transform currentPlayerPositionX;
@@ -34,14 +37,16 @@ public class DataSaver : MonoBehaviour
     {
 
         gameDataCurrent = transform.GetComponent<GameManager>().gameData;
+        
 
 
 
-        SaveToFile();
+
+        //SaveToFile();
 
 
 
-        //InvokeRepeating("SaveToFile", 1f, 1f); // call X , start after X , repeat X
+        InvokeRepeating("SaveToFile", 1f, 1f); // call X , start after X , repeat X
 
     }
 
@@ -66,12 +71,17 @@ public class DataSaver : MonoBehaviour
 
     public void SaveToFile()
     {
-
+        var gm = FindFirstObjectByType<GameManager>();
         PlayerData data = new();
-        data.time = currentTime;
-        data.playerPositionX = currentPlayerPositionX;
-        data.playerScore = currentPlayerScore;
-        data.playerHealth = currentPlayerHealth;
+        data.time = gm.currentTime;
+        data.playerPositionX = gm.currentPlayerPositionX;
+        data.playerScore = gm.currentPlayerScore;
+        data.playerHealth = gm.currentPlayerHealth;
+
+        gameDataCurrent = new();
+        gameDataCurrent.entries.Add(data);
+
+        
 
         //GameData gamedate = new();
         //gamedate.entries.Add(data);
