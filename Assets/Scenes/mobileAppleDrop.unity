@@ -1552,6 +1552,7 @@ MonoBehaviour:
   - {fileID: 7254592548874112268, guid: a67226ad8516b91419e6d115b0869553, type: 3}
   - {fileID: 7254592548874112268, guid: 7eac4c4535c79a44b9b78a0101ad27c9, type: 3}
   - {fileID: 7254592548874112268, guid: 3babb2030a5a91f4bb3f38a2abc8be11, type: 3}
+  playersCharter: {fileID: 5282996893996102351}
   spawnRate: 5
   spawnRange: 1
   scoreText: {fileID: 2032816985}
@@ -1566,6 +1567,7 @@ MonoBehaviour:
   currentPlayerPositionX: {fileID: 0}
   currentPlayerScore: 0
   currentPlayerHealth: 0
+  playerItSelf: {fileID: 5282996893996102345}
 --- !u!114 &1785097372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1596,10 +1598,10 @@ MonoBehaviour:
   currentPlayerScore: 6
   currentPlayerHealth: 5
   playerData:
-    time: 10
-    playerPositionX: {fileID: 5282996893996102345}
-    playerScore: 7
-    playerHealth: 3
+    time: 0
+    playerPositionX: {fileID: 0}
+    playerScore: 0
+    playerHealth: 0
   DataSavingKey: saveDataPlace
   positionSavedShow: {fileID: 824478276}
 --- !u!1001 &1819205744
@@ -2404,6 +2406,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Sensors_Gyroscope
   moveSpeed: 5
   player: {fileID: 5282996893996102339}
+--- !u!114 &5282996893996102351 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8246623374153306981, guid: 191b4ed011ec04240b120c2fb65086ad, type: 3}
+  m_PrefabInstance: {fileID: 5282996893996102338}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5282996893996102339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f724ab62991d16c4ba98c9720fefa1ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player
 --- !u!1001 &8239039976141423019
 PrefabInstance:
   m_ObjectHideFlags: 0
