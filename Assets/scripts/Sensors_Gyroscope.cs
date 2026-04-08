@@ -48,6 +48,6 @@ public class Sensors_Gyroscope : MonoBehaviour
             //player.transform.Translate(rotationDegrees.x, rotationDegrees.y, 0f * Time.deltaTime);
             //rb.linearVelocityX = moveDir * moveSpeed;
         }
-        Debug.Log("test");
+        
     }
 }

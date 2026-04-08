@@ -24,16 +24,19 @@ public class GameManager : MonoBehaviour
     public PlayerData playerData;
 
     public float currentTime;
-    public Transform currentPlayerPositionX;
+    public float currentPlayerPositionX;
     public int currentPlayerScore;
     public int currentPlayerHealth;
     
     public Transform playerItSelf;
 
-    
 
 
 
+    private void Start()
+    {
+        //LoadToObject();
+    }
 
     void SpawnEnemy()
     {
@@ -69,7 +72,7 @@ public class GameManager : MonoBehaviour
 
         currentPlayerScore = playerStats.currentScore;
         currentPlayerHealth = playersCharter.myHP;
-        currentPlayerPositionX = playerItSelf;
+        currentPlayerPositionX = playerItSelf.position.x;
         currentTime += Time.deltaTime; // + playerData.time;
     }
 
@@ -87,12 +90,13 @@ public class GameManager : MonoBehaviour
     public void LoadToObject()
     {
 
-
-        currentTime = playerData.time;
+        
+        playerStats.time = playerData.time;
         currentPlayerPositionX = playerData.playerPositionX;
-        currentPlayerScore = playerData.playerScore;
-        currentPlayerHealth = playerData.playerHealth;
+        playerStats.currentScore = playerData.playerScore;
+        playerStats.currentHealth = playerData.playerHealth;
 
+      
 
 
 

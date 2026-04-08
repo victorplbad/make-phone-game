@@ -19,7 +19,7 @@ public class DataSaver : MonoBehaviour
     
 
     public float currentTime;
-    public Transform currentPlayerPositionX;
+    public float currentPlayerPositionX;
     public int currentPlayerScore;
     public int currentPlayerHealth;
 
@@ -46,7 +46,7 @@ public class DataSaver : MonoBehaviour
 
 
 
-        InvokeRepeating("SaveToFile", 1f, 1f); // call X , start after X , repeat X
+       InvokeRepeating("SaveToFile", 1f, 1f); // call X , start after X , repeat X
 
     }
 

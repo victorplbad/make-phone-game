@@ -1,11 +1,9 @@
 {
     "entries": [
         {
-            "time": 25.02804946899414,
-            "playerPositionX": {
-                "instanceID": 49586
-            },
-            "playerScore": 24,
+            "time": 29.020282745361329,
+            "playerPositionX": 22.893985748291017,
+            "playerScore": 11,
             "playerHealth": 10
         }
     ]
